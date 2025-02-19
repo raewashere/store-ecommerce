@@ -6,6 +6,7 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   //Se cambia para eliminar app.component.html
   template: '<router-outlet />',
+  //Se usan estilos globales
   //styleUrl: './app.component.css'
 })
 export class AppComponent {
