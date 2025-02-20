@@ -15,7 +15,7 @@ export class ProductComponent {
   @Output() addToCart = new EventEmitter();
   
   //Manejador de agregar al carrito
-  addProductToCart() {
+  addToCartHandler() {
     console.log('Click form child');
     this.addToCart.emit('Hola este es un mensaje del hijo al padre ' + this.title);
   }
