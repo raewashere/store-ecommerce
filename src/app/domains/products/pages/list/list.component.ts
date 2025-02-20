@@ -9,5 +9,7 @@ import { ProductComponent } from '../../components/product/product.component';
   styleUrl: './list.component.css'
 })
 export class ListComponent {
-
+  fromChild(event: string){
+    console.log('Event from child: ', event);
+  }
 }
