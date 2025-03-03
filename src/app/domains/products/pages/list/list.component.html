@@ -4,9 +4,7 @@
     <!--Llamado del componente list que contiene products -->
     <app-product 
     *ngFor="let product of products()"
-    [title]="product.title"
-    [price]="product.price"
-    [img]="product.image"
+    [product]="product"
     (addToCart)="fromChild($event)"
     />
 </div>

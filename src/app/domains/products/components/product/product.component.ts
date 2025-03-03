@@ -1,4 +1,5 @@
 import { Component,EventEmitter, Input, Output } from '@angular/core';
+import { Product } from '../../../shared/models/product.model';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +8,8 @@ import { Component,EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  @Input({required: true}) img :  string = '';
-  @Input({required: true}) price :  number = 0;
-  @Input({required: true}) title :  string = '';
+  //Cambio para recibir por producto
+  @Input({required: true}) product !:  Product;
 
   //Evento para mandar mensajes de hijo a padre
   @Output() addToCart = new EventEmitter();
@@ -17,6 +17,6 @@ export class ProductComponent {
   //Manejador de agregar al carrito
   addToCartHandler() {
     console.log('Click form child');
-    this.addToCart.emit('Hola este es un mensaje del hijo al padre ' + this.title);
+    this.addToCart.emit('Hola este es un mensaje del hijo al padre ' + this.product.title);
   }
 }
