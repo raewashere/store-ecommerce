@@ -1,10 +1,13 @@
-<div class="grid grid-cols-3 gap-8">
+<div class="container">
+  <app-header />
+  <div class="grid grid-cols-4 gap-8 mt-5">
     <!--Llamado del componente product-->
     <!--Pasando valores por medio de Input-->
     <!--Llamado del componente list que contiene products -->
-    <app-product 
-    *ngFor="let product of products()"
-    [product]="product"
-    (addToCart)="fromChild($event)"
+    <app-product
+      *ngFor="let product of products()"
+      [product]="product"
+      (addToCart)="fromChild($event)"
     />
+  </div>
 </div>
