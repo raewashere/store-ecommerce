@@ -16,7 +16,6 @@ export class ProductComponent {
   
   //Manejador de agregar al carrito
   addToCartHandler() {
-    console.log('Click form child');
-    this.addToCart.emit('Hola este es un mensaje del hijo al padre ' + this.product.title);
+    this.addToCart.emit(this.product);
   }
 }
