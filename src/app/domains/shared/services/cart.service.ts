@@ -23,3 +23,7 @@ export class CartService {
 
 
 //Servicio control de datos
+
+//Inyeccion de servicio en otro servicio, pero no es bidireccional
+
+//Los componentes pueden consumir n servicios, pero deben de ser pocoss
