@@ -31,13 +31,13 @@
     <div class="flex items-center">
       <button
         class="px-4"
-        (click)="toggleSideMenu()"
+        (click)="toogleSideMenu()"
         class="p-2 border rounded relative"
       >
         <div
           class="absolute -top-2 -left-2 rounded h-5 w-5 bg-black text-white text-xs"
         >
-          {{ cart.length }}
+          {{ cart().length }}
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@
 >
   <div class="flex justify-between items-center">
     <p class="text-xl">My Cart</p>
-    <button (click)="toggleSideMenu()" class="p-2 border rounded relative">
+    <button (click)="toogleSideMenu()" class="p-2 border rounded relative">
       <div
         class="absolute -top-2 -left-2 rounded h-5 w-5 bg-black text-white text-xs"
       >

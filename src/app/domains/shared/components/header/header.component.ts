@@ -1,13 +1,14 @@
-import { Component, Input, signal, SimpleChanges, inject } from '@angular/core';
-import { Product } from '../../models/product.model';
+import { Component, Input, SimpleChanges, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Product } from '../../models/product.model';
 import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
   //Estado del carrito visible o no
@@ -18,10 +19,9 @@ export class HeaderComponent {
   total = this.cartService.total;
 
   //Funcion para mostrar u ocultar el carrito
-  toggleSideMenu() {
-    this.hideSideMenu.update(prevState => !prevState);
+  toogleSideMenu() {
+    this.hideSideMenu.update((prevState) => !prevState);
   }
 }
-
 
 //Componente solo renders

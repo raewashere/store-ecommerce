@@ -15,7 +15,7 @@ export class ListComponent {
 
   products = signal<Product[]>([]);
 
-  //INYECCION DE DEPENDENCIAS
+  //Inyeccion de dependencias
   private cart = inject(CartService);
 
   constructor() {
