@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 //Importacion de componente CounterComponent
-import { CounterComponent } from "../../../shared/components/counter/counter.component";
+import { CounterComponent } from "@shared/components/counter/counter.component";
 import { WaveAudioComponent } from '../../components/wave-audio/wave-audio.component';
 
 @Component({
