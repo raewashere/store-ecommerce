@@ -20,6 +20,7 @@
     "paths": {
       "@shared/*": ["./src/app/domains/shared/*"], // Path alias for shared module
       "@products/*": ["./src/app/domains/products/*"], // Path alias for shared module
+      "@info/*": ["./src/app/domains/info/*"], // Path alias for shared module
     }
   },
   "angularCompilerOptions": {
