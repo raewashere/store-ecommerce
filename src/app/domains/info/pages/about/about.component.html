@@ -1,6 +1,9 @@
-<div class="px-10">
-    <h1 class="text-lg font-bold">About</h1>
-    <p class="text-xs"><span highlight>Lorem ipsum dolor sit amet</span> consectetur adipisicing elit. Aspernatur fugit porro minus fugiat excepturi a tempore eaque in sint. Modi quod doloribus hic saepe, reiciendis adipisci dicta laboriosam delectus expedita.</p>
-    <p class="text-sm">Numero de clientes <app-counter [duration]="duration()" [message]="message()" *ngIf="duration()"></app-counter></p>
-    <app-wave-audio audioUrl="https://upload.wikimedia.org/wikipedia/commons/c/c1/J.S.Bach_-_Transcription_for_harpsichord_of_Vivaldi_Concerto_Op._3%2C_No._9%2C_BWV_972_–_2_Larghetto.oga"></app-wave-audio>
-</div>
+<div class="container mx-auto">
+    <app-header/>
+    <div>
+        <h1 class="text-lg font-bold">About</h1>
+        <p class="text-xs"><span highlight>Lorem ipsum dolor sit amet</span> consectetur adipisicing elit. Aspernatur fugit porro minus fugiat excepturi a tempore eaque in sint. Modi quod doloribus hic saepe, reiciendis adipisci dicta laboriosam delectus expedita.</p>
+        <p class="text-sm">Numero de clientes <app-counter [duration]="duration()" [message]="message()" *ngIf="duration()"></app-counter></p>
+        <app-wave-audio audioUrl="https://upload.wikimedia.org/wikipedia/commons/c/c1/J.S.Bach_-_Transcription_for_harpsichord_of_Vivaldi_Concerto_Op._3%2C_No._9%2C_BWV_972_–_2_Larghetto.oga"></app-wave-audio>
+    </div>
+  </div>
