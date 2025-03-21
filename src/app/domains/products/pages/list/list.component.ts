@@ -1,5 +1,5 @@
 import { Component, signal, inject, Input, SimpleChanges } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterLinkWithHref } from '@angular/router';
 import { ProductComponent } from '@products/components/product/product.component';
 import { Product } from '@shared/models/product.model';
@@ -10,7 +10,7 @@ import { Category } from '@shared/models/category.model';
 
 @Component({
   selector: 'app-list',
-  imports: [CommonModule, ProductComponent, RouterLinkWithHref],
+  imports: [ProductComponent, RouterLinkWithHref],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css',
 })

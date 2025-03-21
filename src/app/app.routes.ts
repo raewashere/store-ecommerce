@@ -13,15 +13,19 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: ListComponent,
+        //Vamos a cargar el componente de manera dinámica por chunks
+        //component: ListComponent,
+        loadComponent: () => import('@products/pages/list/list.component').then((m) => m.ListComponent),
       },
       {
         path: 'about',
-        component: AboutComponent,
+        //component: AboutComponent,
+        loadComponent: () => import('@info/pages/about/about.component').then((m) => m.AboutComponent),
       },
       {
         path: 'product/:id',
-        component: ProductDetailComponent,
+        //component: ProductDetailComponent,
+        loadComponent: () => import('@products/pages/product-detail/product-detail.component').then((m) => m.ProductDetailComponent),
       },
     ],
   },
@@ -29,6 +33,7 @@ export const routes: Routes = [
   //Siempre al final para redirigir a la 404
   {
     path: '**',
-    component: NotFoundComponent,
+    //component: NotFoundComponent,
+    loadComponent: () => import('@info/pages/not-found/not-found.component').then((m) => m.NotFoundComponent),
   },
 ];
